@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 1</title>
+</head>
+<body>
+    <h1>Experiment 1</h1>
+    <h2>Open console to test!</h2>
+
+    <a href="../index.html">Back to portal</a>
+    <script>
+
+        /*My program reverses the letters in each word of a sentence, while keeping the words themselves in their original order.
+
+        I wasn't able to figure out how to put the letters of each word back together, or how to put the words back into a single line, but the characters themselves reverse correctly as individuals.*/
+
+
+        var userString = prompt("Type out a sentence!", "");
+            //Split function to transform the string into an array.
+            var stringWords = userString.split(" ");
+
+            //For loop to break the array into individual words.
+            for(var i=0; i<stringWords.length; i++){
+                var stringWord = stringWords[i];
+
+                //For loop to break individual words into letters in reverse order.
+                for(var j=stringWord.length-1; j>-1; j--){
+                    var lettersBackwards = stringWord[j];
+                    console.log(lettersBackwards);
+                }
+            }
+    </script>
+</body>
+</html>
