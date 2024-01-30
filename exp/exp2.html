@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+</head>
+<body>
+    <div id="favColor">
+        <h1>I'm your favorite color!</h1>
+    </div>
+
+    <script>
+        /* My program asks the user which color they prefer out of green, blue, or red, and changes the color of the h1 text to match.
+        
+        If the user does not answer one of these three, an error message appears.*/
+        
+        var userString = prompt("Which is your favorite: green, blue, or red?", "");
+
+        if(userString === "Red" || userString === "red") {
+            document.querySelector("h1").style.color = "red";
+
+            function thankYou(thankYou) {
+                var correctMessage = "Thank you for answering!";
+                return correctMessage;
+            }
+
+            console.log(thankYou("Thank you for answering!"));
+
+        } if (userString === "Green" || userString === "green") {
+            document.querySelector("h1").style.color = "green";
+
+            function thankYou(thankYou) {
+                var correctMessage = "Thank you for answering!";
+                return correctMessage;
+            }
+
+            console.log(thankYou("Thank you for answering!"));
+
+        } if (userString === "Blue" || userString === "blue") {
+            document.querySelector("h1").style.color = "blue";
+
+            function thankYou(thankYou) {
+                var correctMessage = "Thank you for answering!";
+                return correctMessage;
+            }
+
+            console.log(thankYou("Thank you for answering!"));
+
+        } else {
+            var wrong = document.createElement("h2");
+            wrong.innerHTML = "I know you didn't answer properly >:(";
+            document.body.appendChild(wrong);
+        }
+    </script>
+</body>
+</html>
