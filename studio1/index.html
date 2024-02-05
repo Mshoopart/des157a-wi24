@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <title>Mad Libs</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Celestial Standoff</h1>
+    </header>
+
+    <main>
+        <form id="myform" class=".showing">
+            <label for="name">Provide a name</label>
+            <input type="text" id="name" required>
+
+            <label for="pluralnoun">Provide a plural noun</label>
+            <input type="text" id="pluralnoun" required>
+
+            <label for="verb1">Provide a verb</label>
+            <input type="text" id="verb1" required>
+
+            <label for="object">Provide an object</label>
+            <input type="text" id="object" required>
+
+            <label for="verb2">Provide a verb</label>
+            <input type="text" id="verb2" required>
+
+            <label for="adj1">Provide an adjective</label>
+            <input type="text" id="adj1" required>
+
+            <label for="goofyname">Provide a goofy name</label>
+            <input type="text" id="goofyname" required>
+
+            <label for="verb3">Provide a past-tense verb</label>
+            <input type="text" id="verb3" required>
+
+            <label for="verb4">Provide another verb</label>
+            <input type="text" id="verb4" required>
+
+            <label for="adj2">Provide another adjective</label>
+            <input type="text" id="adj2" required>
+
+            <input type="submit" class="btn">
+        </form>
+
+        <article id="madlib"></article>
+    </main>
+</body>
+</html>
