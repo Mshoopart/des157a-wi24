@@ -6,6 +6,9 @@
     document.getElementById("madlib").className = "hidden";
     const myForm = document.querySelector("#myform");
 
+    const mybg = document.querySelector("body").className = "startbg";
+
+
     myForm.addEventListener("submit", function(event) {
         event.preventDefault();
         const name = document.querySelector("#name").value;
@@ -72,5 +75,6 @@
         document.getElementById("myform").className = "hidden";
         document.getElementById("title").className = "hidden";
         document.getElementById("madlib").className = "showing";
+        document.querySelector("body").className = "endbg";
     });
 })();

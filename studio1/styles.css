@@ -1,5 +1,4 @@
 body {
-    background-color: #232323;
     color: #FFFFFF;
     font-family: "Pixelify Sans";
 }
@@ -65,8 +64,9 @@ h1 {
 }
 
 #madlib {
+    background-color: #232323;
     position: absolute;
-    top: 75%;
+    top: 77%;
     left: 50%;
     transform: translateX(-50%);
 
@@ -74,6 +74,18 @@ h1 {
     border: 10px solid #FFFFFF;
     border-radius: 10px;
     margin: auto;
-    padding: 10px;
-    line-height: 20px;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.startbg {
+    background-color:#232323;
+}
+
+.endbg {
+    background-image: url('images/bgmadlib.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
