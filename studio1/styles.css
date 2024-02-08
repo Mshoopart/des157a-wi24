@@ -80,7 +80,10 @@ h1 {
 }
 
 .startbg {
-    background-color:#232323;
+    background-image: url('images/bgform.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .endbg {
