@@ -56,3 +56,11 @@ footer {
     gap: 20px;
     padding: 2em
 }
+
+figure {
+    margin-top: 3em;
+}
+
+figcaption {
+    margin-top: 0.5em;
+}
