@@ -43,6 +43,10 @@ p {
     margin: 3em auto 4em auto;
 }
 
+#down {
+    visibility: hidden;
+}
+
 footer {
     margin: 2em;
     font-family: "Jura";
