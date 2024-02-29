@@ -1,0 +1,43 @@
+body {
+    background-image: url('images/bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    font-family: Arial;
+    color: #333;
+    padding: 50px;
+    line-height: 1.5em;
+}
+
+h1 {
+    font-family: "Press Start 2P";
+}
+
+h2 {
+    font-family: "Press Start 2P";
+}
+
+p {
+    font-family: "Silkscreen";
+}
+
+button {
+    font-family: "Silkscreen";
+    padding: 10px;
+}
+
+div {
+    padding: 20px;
+}
+
+#gamecontrol, #score {
+    background-color: aliceblue;
+}
+
+#game {
+    background-color:#eaeaea;
+}
+#actions {
+    background-color: silver;
+}
