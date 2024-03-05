@@ -26,12 +26,17 @@
     const startGame = document.querySelector('#startgame');
     const gameControl = document.querySelector('#gamecontrol');
     const game = document.querySelector('#game');
+        game.className = "hidden";
     const score = document.querySelector('#score');
+        score.className = 'hidden';
     const actionArea = document.querySelector('#actions');
+        actionArea.className = 'hidden';
+
+    const rules = document.getElementById('rules').className = "hidden";
 
     const gameData = {
         dice: ['images/1die.jpg', 'images/2die.jpg', 'images/3die.jpg', 'images/4die.jpg', 'images/5die.jpg', 'images/6die.jpg'],
-        players: ['player 1', 'player 2'],
+        players: ['FLARA', 'DEMIGODZILLA'],
         score: [0, 0],
         roll1: 0,
         roll2: 0,
@@ -44,8 +49,13 @@
         gameData.index = Math.round(Math.random());
         console.log(gameData.index);
 
-        gameControl.innerHTML = '<h2>The Game Has Started</h2>';
-        gameControl.innerHTML += '<button id="quit">Wanna Quit?</button>';
+        document.querySelector('body').className = 'citybg';
+        document.getElementById('title').className = 'hidden';
+        game.className = "showing";
+        score.className = "showing";
+        actionArea.className = "showing";
+        gameControl.innerHTML = '<button id="quit">QUIT</button>';
+        
 
         document.getElementById('quit').addEventListener("click", function(){
             location.reload();
@@ -66,15 +76,18 @@
         actionArea.innerHTML = '';
         gameData.roll1 = Math.floor(Math.random() * 6) + 1;
         gameData.roll2 = Math.floor(Math.random() * 6) + 1;
-        game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
-        game.innerHTML += `<img src="${gameData.dice[gameData.roll1-1]}">
-                           <img src="${gameData.dice[gameData.roll2-1]}">`;
+
+        game.innerHTML = `<div><img src="${gameData.dice[gameData.roll1-1]}"> 
+                            <img src="${gameData.dice[gameData.roll2-1]}"></div>
+                            
+                            <p id="rollfor">Roll the dice for the ${gameData.players[gameData.index]}</p>`;
+
         gameData.rollSum = gameData.roll1 + gameData.roll2;
 
         if(gameData.rollSum === 2){
             console.log("snake eyes were rolled");
 
-            game.innerHTML += '<p>Oh snap! Snake eyes!</p>';
+            game.innerHTML += `<p>${gameData.players[gameData.index]} was healed</p>`;
             gameData.score[gameData.index] = 0;
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             setTimeout(setUpTurn, 2000);
@@ -84,13 +97,13 @@
             console.log("one of the two die was a 1");
 
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-            game.innerHTML += `<p>Sorry, one of your rolls was a one, switching to ${gameData.players[gameData.index]}</p>`;
+            game.innerHTML += `<p>Switching to ${gameData.players[gameData.index]}</p>`;
             setTimeout(setUpTurn, 2000);
         } else {
             console.log("the game proceeds");
 
             gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
-            actionArea.innerHTML = '<button id="rollagain">Roll again</button> or <button id="pass">Pass</button>';
+            actionArea.innerHTML = `<button id="rollagain">Roll again</button> or <button id="pass">Pass</button>`;
 
             document.getElementById('rollagain').addEventListener('click', function (){
                 throwDice();
@@ -106,7 +119,7 @@
 
         function checkWinningCondition(){
             if(gameData.score[gameData.index] > gameData.gameEnd){
-                score.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h2>`;
+                score.innerHTML = `<h2>${gameData.players[gameData.index]} WINS`;
 
                 actionArea.innerHTML = '';
                 document.getElementById('quit').innerHTML = "Start a New Game?";
@@ -116,8 +129,7 @@
         }
 
         function showCurrentScore(){
-            score.innerHTML = `<p>The score is currently <strong>${gameData.players[0]} ${gameData.score[0]}</strong>
-            and <strong>${gameData.players[1]} ${gameData.score[1]}</strong.</p>`;
+            score.innerHTML = `<p>${gameData.score[0]}</p> <p>${gameData.score[1]}</p>`;
         }
     }
 

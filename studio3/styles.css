@@ -1,9 +1,25 @@
-body {
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    visibility: visible;
+    opacity: 1;
+}
+
+.standardbg {
+    background-color: black;
+}
+
+.citybg {
     background-image: url('images/bg.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+}
 
+body {
     font-family: Arial;
     color: #333;
     padding: 50px;
@@ -12,32 +28,102 @@ body {
 
 h1 {
     font-family: "Press Start 2P";
+    text-align: center;
+    color: white;
 }
 
 h2 {
     font-family: "Press Start 2P";
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
 }
 
 p {
     font-family: "Silkscreen";
+    color: white;
+    margin: 0px;
 }
 
 button {
-    font-family: "Silkscreen";
-    padding: 10px;
+    position: absolute;
+    top: 325px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Press Start 2P";
+    font-size: 25px;
+    padding: 15px 20px;
 }
 
 div {
     padding: 20px;
 }
 
-#gamecontrol, #score {
-    background-color: aliceblue;
+#gamecontrol {
+    width: 90%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#characterprofiles {
+    display: flex;
+    gap: 100px;
+}
+
+.profile {
+    width: 45%;
+}
+
+#quit {
+    position: absolute;
+    top: 275px;
+    left: 5%;
+    font-size: 20px;
+    padding: 10px 15px;
 }
 
 #game {
-    background-color:#eaeaea;
+    width: 100%;
+    position: absolute;
+    top: 550px;
+    left: 50%;
+    transform: translateX(-50%); 
 }
+
+#game div {
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    top: -60%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#game img {
+    width: 100px;
+    height: 100px;
+}
+
+#rollfor {
+    position: absolute;
+    top: 125px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+}
+
 #actions {
-    background-color: silver;
+
+}
+
+#score {
+    position: absolute;
+    display: flex;
+    gap: 40px;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
 }
