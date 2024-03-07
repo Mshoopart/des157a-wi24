@@ -1,0 +1,45 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #252525;
+    width: 1200px;
+    margin: auto;
+    font-family: "Spline Sans Mono";
+    font-weight: 300;
+    color: #FFFFFF;
+}
+
+h1 {
+    margin: 0.5em;
+    font-weight: 400;
+    font-size: 60px;
+}
+
+h2 {
+    margin: 0.5em 1.2em 0em 1.2em;
+    padding: 1em 0 0 0;
+    font-weight: 400;
+    font-size: 26px;
+}
+
+p {
+    width: 450px;
+    margin: 2em 2em;
+    font-size: 16px;
+    text-align: left;
+    line-height: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #FD8AFD;
+}
+
+footer {
+    display: flex;
+    gap: 20px;
+    padding: 2em
+}

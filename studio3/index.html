@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of PIG</title>
+    <script src="script.js" defer></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body class="standardbg">
+    <h1 id="title">STREET WARRIORS</h1>
+
+    <section id="rules">
+        <p>There are two players. The player whose turn it is rolls the dice. The total of the roll is added to the current player's score, unless either die comes up as a "one". If this happens, this player's turn is over, and it is the other player’s turn. After each roll, the current player can either roll again, (assuming a "one" was not rolled) or if the current player feels that luck is running thin, they can pass to the other player. The first player to get 30 points or higher wins.</p> 
+        <p>Oh, and if you roll two "ones" (snake eyes), your current score gets zeroed out. So don’t do that.</p>
+    </section>
+
+    <section id="gamecontrol">
+        <div id="characterprofiles">
+            <div class="profile">
+                <h2>FLARA</h2>
+                <img src="images/flaraprofile.jpg" alt="flara profile picture" width="300" height="300">
+                <p>"It won't be long before your hopes and dreams are burnt to a crisp."</p>
+            </div>
+
+            <div class="profile">
+                <h2>DEMIGODZILLA</h2>
+                <p>"My brother destroys cities. I'll destroy you."</p>
+            </div>
+        </div>
+
+        <button id="startgame">FIGHT</button>
+    </section>
+
+    <section id="game">
+        <div>
+            <div class="health">
+                <div id="healthbar0"><div></div></div>
+            </div>
+            <h2 id="name1">FLARA</h2>
+            <img src="#" alt="Flara" id="flara">  
+        </div>
+
+        <div>
+            <div class="health">
+                <div id="healthbar1"><div></div></div>
+            </div>
+            <h2 id="name2">DEMIGODZILLA</h2>
+            <img src="#" alt="Demigodzilla" id="demi">
+        </div>
+    </section>
+
+    <section id="action">
+        <div id="messages">
+            <p></p>
+        </div>
+        <button id="attack" class="hidden">ATTACK</button>
+    </section>
+</body>
+</html>
