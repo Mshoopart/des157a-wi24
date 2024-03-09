@@ -113,7 +113,6 @@ div {
 
 .health {
     display: flex;
-    align-content: top;
     gap: 15px;
     padding: 5px;
 }
