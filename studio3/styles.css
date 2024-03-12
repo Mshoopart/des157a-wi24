@@ -24,16 +24,23 @@ html {
 }
 
 body {
-    font-family: Arial;
     color: #333;
     padding: 50px;
     line-height: 1.5em;
+}
+
+#sourcebody {
+    background-color: black;
 }
 
 h1 {
     font-family: "Press Start 2P";
     text-align: center;
     color: white;
+}
+
+#sourceh1 {
+    text-align: left;
 }
 
 h2 {
@@ -59,6 +66,10 @@ button {
     font-family: "Press Start 2P";
     font-size: 25px;
     padding: 15px 20px;
+}
+
+#startgame {
+    top: 500px;
 }
 
 div {
@@ -93,7 +104,7 @@ div {
 
 #quit {
     position: absolute;
-    top: 200px;
+    top: 220px;
     left: 5%;
     font-size: 20px;
     padding: 10px 15px;
@@ -159,18 +170,26 @@ div {
 }
 
 #messages {
+    width: 600px;
     position: absolute;
-    top: 250px;
+    top: 235px;
     left: 50%;
     transform: translateX(-50%);
     color: white;
     font-family: "Silkscreen";
-    font-size: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#messages p {
+    margin: auto;
 }
 
 #win {
-    top: 150px;
+    top: 50%;
     transform: translateY(-50%);
+    font-size: 50px;
+    margin: 0;
 }
 
 #demi {
@@ -179,6 +198,30 @@ div {
 
 #attack {
     font-size: 20px;
+}
+
+#reset {
+    margin: auto;
+    position: absolute;
+    top: 90px;
+}
+
+a {
+    font-family: "Press Start 2P";
+    font-size: 16px;
+    color: hotpink;
+}
+
+#source1 {
+    margin: 40px 0 20px 0;
+}
+
+#source2 {
+    margin: 0;
+}
+
+#sourcefooter {
+    margin-top: 6em;
 }
 
 .attack0 {

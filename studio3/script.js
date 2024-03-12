@@ -75,12 +75,16 @@
         index: 0
     };
 
+    const punch1 = new Audio('sounds/PUNCH.mp3');
+    const punch2 = new Audio('sounds/punch2.mp3');
+
     startGame.addEventListener("click", function(){
         gameData.index = Math.round(Math.random());
         console.log(gameData.index);
 
         document.querySelector('body').className = 'citybg';
         document.getElementById('title').className = 'hidden';
+        document.getElementById('sources').className = 'hidden';
 
         game.className = 'showing';
         action.className = 'showing';
@@ -121,8 +125,12 @@
 
             if(thisDefense == 0){
                 gameData.health[defenderIndex] = gameData.health[defenderIndex] - gameData.attack[thisAttack];
+
+                punch1.play();
             } else if (thisDefense == 1){
                 gameData.health[defenderIndex] = gameData.health[defenderIndex] - gameData.attack[thisAttack]/2;
+
+                punch2.play();
             }
 
             let health = Math.floor(parseFloat(gameData.health[defenderIndex]));
@@ -143,7 +151,8 @@
             if(health < 1){
                 messages.innerHTML = `<p id="win">${attackingCharacter} WINS</p>`;
                 messages.style.fontSize = "50px";
-                attackBtn.innerHTML = '<button id="reset">REMATCH</button>';
+                messages.innerHTML += '<button id="reset">REMATCH</button>';
+                attackBtn.classname = "hidden";
                 document.querySelector('#reset').addEventListener('click', function(){
                     location.reload();
                 });
