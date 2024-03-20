@@ -1,0 +1,361 @@
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    visibility: visible;
+    opacity: 1;
+}
+
+.standardbg {
+    background-color: black;
+}
+
+.bg1 {
+    background-image: url('images/citybg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.bg1 h2 {
+    color: white;
+}
+
+.bg2 {
+    background-image: url('images/junglebg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.bg2 h2 {
+    color: black;
+    padding: 0;
+}
+
+html {
+    height: 750px;
+}
+
+body {
+    color: #333;
+    padding: 50px;
+    line-height: 1.5em;
+}
+
+#sourcebody {
+    background-color: black;
+}
+
+h1 {
+    font-family: "Press Start 2P";
+    text-align: center;
+    color: white;
+}
+
+#sourceh1 {
+    text-align: left;
+}
+
+h2 {
+    font-family: "Press Start 2P";
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+p {
+    width: 300px;
+    font-family: "Silkscreen";
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    position: absolute;
+    top: 325px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Press Start 2P";
+    font-size: 25px;
+    padding: 15px 20px;
+}
+
+#startgame {
+    top: 500px;
+}
+
+div {
+    padding: 20px;
+}
+
+#gamecontrol {
+    width: 90%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#characterprofiles {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.profile {
+    width: 45%;
+}
+
+.profile img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid silver;
+    border-radius: 10px;
+}
+
+#quit {
+    position: absolute;
+    top: 220px;
+    left: 5%;
+    font-size: 20px;
+    padding: 10px 15px;
+}
+
+#game {
+    display: flex;
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: space-around;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+}
+
+.health {
+    display: flex;
+    gap: 15px;
+    padding: 5px;
+}
+
+#healthbar0, #healthbar1 {
+    width: 500px;
+    height: 20px;
+    background-color: white;
+    border: 2px solid silver;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden; 
+    padding: 0; 
+}
+
+#healthbar0 div, #healthbar1 div{
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+    padding: 0;
+}
+
+#game #name1 {
+    font-size: 20px;
+    text-align: left;
+    padding-left: 5px;
+}
+
+#game #name2 {
+    font-size: 20px;
+    text-align: right;
+    padding-right: 5px;
+}
+
+#action {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#messages {
+    width: 600px;
+    position: absolute;
+    top: 235px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: "Silkscreen";
+    font-size: 30px;
+    text-align: center;
+}
+
+#messages p {
+    margin: auto;
+}
+
+#win {
+    width: 600px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    margin: 0;
+}
+
+#flara {
+    position: absolute;
+    top: 120px;
+}
+
+#demi {
+    position: absolute;
+    float: right;
+    top: 120px;
+    left: 650px;
+}
+
+#attack {
+    position: absolute;
+    top: 275px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.lowopac {
+    visibility: visible;
+    opacity: 0.5;
+}
+
+#reset {
+    margin: auto;
+    position: absolute;
+    top: 90px;
+}
+
+a {
+    font-family: "Press Start 2P";
+    font-size: 16px;
+    color: hotpink;
+}
+
+#source1 {
+    margin: 40px 0 20px 0;
+}
+
+#source2 {
+    margin: 0;
+}
+
+#sourcefooter {
+    margin-top: 6em;
+}
+
+.attack0 {
+    animation: veryweak 1s ease-in-out 2;
+}
+
+.attack1 {
+    animation: weak 1s ease-in-out 2;
+}
+
+.attack2 {
+    animation: medium 1s ease-in-out 2;
+}
+
+.attack3 {
+    animation: strong 1s ease-in-out 2;
+}
+
+.attack4 {
+    animation: massive 1s ease-in-out 2;
+}
+
+.defend2 {
+    animation: gobackward 2s ease-in-out 1;
+}
+
+.defend0 {
+    animation: shake 1s ease-in-out 2;
+}
+
+.defend1{
+    animation: spin 1s ease-in-out 2;
+}
+
+@keyframes veryweak {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);} 
+    100% {transform: scale(1);}
+}
+
+@keyframes weak {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.3);} 
+    100% {transform: scale(1);}
+}
+
+@keyframes medium {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.5);} 
+    100% {transform: scale(1);}
+}
+
+@keyframes strong {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.7);} 
+    100% {transform: scale(1);}
+}
+
+@keyframes massive {
+    0% {transform: scale(1);}
+    50% {transform: scale(2);} 
+    100% {transform: scale(1);}
+}
+
+@keyframes gobackward {
+    0% {transform: scale(1);}
+    20% {transform: scale(0.6) rotate(-15deg);}
+    40% {transform: scale(0.6) rotate(15deg);}
+    60% {transform: scale(0.6) rotate(0deg);}
+    80% {transform: scale(0.6);}
+    100% {transform: scale(1);}
+}
+
+@keyframes shake {
+    0% {transform: translateX(0px);}
+    20% {transform: translateX(-10px);}
+    40% {transform: translateX(10px);}
+    60% {transform: translateX(-5px);}
+    80% {transform: translateX(5px);}
+    100% {transform: translateX(0px);}
+}
+
+@keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);} 
+}
+
+/*#rollfor {
+    position: absolute;
+    top: 125px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+}*/
+
+/*#score {
+    position: absolute;
+    display: flex;
+    gap: 40px;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+}*/
